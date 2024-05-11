@@ -3,12 +3,16 @@ import { TavilySearchResults } from "@langchain/community/tools/tavily_search";
 
 const start_time = Date.now();
 const endpoint = "https://polite-ground-030dc3103.4.azurestaticapps.net/api/v1";
-const azureApiKey = "8d95f5b3-c10f-40df-b19b-e2755c8666ce";
+const azureApiKey = " YOUR API KEY HERE";
 const client = new OpenAIClient(endpoint, new AzureKeyCredential(azureApiKey));
+
+
+//ANY LLM CAN BE USED BASICALLY, YOU CAN JUST FLIP Things
+
 const deploymentId = "gpt-35-turbo";
 const webSearch = new TavilySearchResults({
   maxResults: 1,
-  apiKey: "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",
+  apiKey: "tvly-",
 });
 
 class ToolManager {
